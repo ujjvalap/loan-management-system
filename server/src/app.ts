@@ -57,6 +57,11 @@ app.get('/health', (_req, res) => {
   });
 });
 
+//Public Route
+app.get("/", (req, res) => {
+  res.send("LMS Backend Successfully Deployed ");
+});
+
 //Routes 
 app.use('/api/auth', authRoutes);
 app.use('/api/borrower', borrowerRoutes);
